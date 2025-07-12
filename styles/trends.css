@@ -1,0 +1,441 @@
+/* Trends page specific styles */
+
+.trends-header {
+  padding: var(--spacing-6) 0;
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.trends-header-content {
+  text-align: center;
+}
+
+.trends-header h1 {
+  margin-bottom: var(--spacing-2);
+  font-size: 2.5rem;
+}
+
+.trends-header p {
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Timeline section */
+.timeline-section {
+  padding: var(--spacing-8) 0;
+}
+
+.timeline-card {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 20px var(--color-shadow);
+  overflow: hidden;
+}
+
+.timeline-header {
+  padding: var(--spacing-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timeline-header h2 {
+  margin-bottom: var(--spacing-4);
+}
+
+.timeline-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 992px) {
+  .timeline-controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.timeline-data-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.timeline-year-controls {
+  width: 100%;
+  max-width: 500px;
+}
+
+.year-slider-container {
+  width: 100%;
+}
+
+.year-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--spacing-1);
+}
+
+.year-slider {
+  position: relative;
+  height: 4px;
+  background-color: var(--color-bg-tertiary);
+  border-radius: 2px;
+  margin: var(--spacing-3) 0;
+}
+
+.year-slider-track {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.year-slider-fill {
+  position: absolute;
+  height: 100%;
+  background-color: var(--color-primary-600);
+  border-radius: 2px;
+  left: 0%;
+  right: 0%;
+}
+
+.year-slider-handle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 2px solid var(--color-primary-600);
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+  transition: box-shadow var(--transition-standard);
+}
+
+.year-slider-handle:hover {
+  box-shadow: 0 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+.year-slider-handle.left {
+  left: 0%;
+}
+
+.year-slider-handle.right {
+  left: 100%;
+}
+
+.year-slider-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.timeline-chart-container {
+  padding: var(--spacing-5);
+  height: 400px;
+}
+
+.timeline-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.timeline-insights {
+  padding: var(--spacing-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.timeline-insights h3 {
+  margin-bottom: var(--spacing-4);
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .insights-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.insight-card {
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: flex-start;
+}
+
+.insight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: var(--color-bg-secondary);
+  flex-shrink: 0;
+}
+
+.insight-content {
+  flex: 1;
+}
+
+.insight-content h4 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-1);
+}
+
+.insight-content p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Comparison section */
+.comparison-section {
+  padding: var(--spacing-8) 0;
+  background-color: var(--color-bg-secondary);
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.comparison-header h2 {
+  margin-bottom: var(--spacing-2);
+}
+
+.comparison-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-6);
+}
+
+.comparison-chart-container {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  padding: var(--spacing-5);
+  height: 400px;
+  margin-bottom: var(--spacing-6);
+}
+
+.comparison-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.correlation-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-5);
+}
+
+.stat-box {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  padding: var(--spacing-4);
+  text-align: center;
+  width: 300px;
+}
+
+.stat-box h4 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-2);
+}
+
+.stat-box .stat-value {
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+  margin-bottom: var(--spacing-2);
+}
+
+.stat-box .stat-description {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+/* Scenarios section */
+.scenarios-section {
+  padding: var(--spacing-8) 0;
+  background-color: var(--color-bg-primary);
+}
+
+.scenarios-header {
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.scenarios-header h2 {
+  margin-bottom: var(--spacing-2);
+}
+
+.scenarios-chart-wrapper {
+  margin-bottom: var(--spacing-8);
+}
+
+.scenarios-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-5);
+}
+
+.scenario-toggle-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.scenario-toggles {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.scenario-toggle {
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--border-radius-md);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-standard);
+}
+
+.scenario-toggle:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.scenario-toggle.active {
+  background-color: var(--color-primary-600);
+  color: white;
+  border-color: var(--color-primary-600);
+}
+
+.scenarios-chart-container {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  padding: var(--spacing-5);
+  height: 400px;
+}
+
+.scenarios-detail {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  overflow: hidden;
+}
+
+.scenarios-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.scenario-tab {
+  flex: 1;
+  padding: var(--spacing-3) var(--spacing-2);
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-standard);
+}
+
+.scenario-tab.active {
+  color: var(--color-primary-600);
+  border-bottom-color: var(--color-primary-600);
+  background-color: var(--color-bg-primary);
+}
+
+.scenario-detail-content {
+  padding: var(--spacing-5);
+  background-color: var(--color-bg-primary);
+}
+
+.scenario-metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+  .scenario-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.scenario-metric {
+  background-color: var(--color-bg-secondary);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius-md);
+}
+
+.scenario-metric-label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-1);
+}
+
+.scenario-metric-value {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.scenario-description {
+  margin-bottom: var(--spacing-4);
+  line-height: 1.6;
+}
+
+.scenario-impacts h4 {
+  margin-bottom: var(--spacing-2);
+  font-size: 1.1rem;
+}
+
+.scenario-impacts ul {
+  padding-left: var(--spacing-5);
+  margin-bottom: 0;
+}
+
+.scenario-impacts li {
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.scenario-impacts li:last-child {
+  margin-bottom: 0;
+}
